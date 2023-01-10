@@ -1,0 +1,16 @@
+*vtp server
+en
+conf t
+mode server
+Vtp domain nameDomain
+Vtp password namePassword
+
+
+*vtp client
+en
+conf t
+mode client
+Vtp domain nameDomain
+Vtp password namePassword
+
+

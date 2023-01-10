@@ -1,0 +1,32 @@
+P = 2
+G = 4
+
+
+from mimetypes import init
+import random
+import config
+
+
+def mypow(a,b,n):
+	return(a ** b) % n
+
+def main():
+	#genero segreto
+
+	a=random.randint(1,config.P-2)
+	
+
+	#genero numero pubblico
+
+	ga=mypow(config.G, a, config.P)
+	print(ga)
+
+	gb = init(input("Inserire l'altro numero: "))
+
+	gab=mypow(gb, a, config.P)
+	
+
+
+
+if __name__ == "__main__":
+	main()
